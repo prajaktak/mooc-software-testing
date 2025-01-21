@@ -40,4 +40,11 @@ public class RomanNumeralTest {
         int result = roman.convert("MCMLXXXIII");
         Assertions.assertEquals(1983, result);
     }
+
+    @Test
+    public void numberWithInvalidNumber() {
+        RomanNumeral roman = new RomanNumeral();
+        int result = roman.convert("VX");
+        Assertions.assertEquals(0, result);
+    }
 }
