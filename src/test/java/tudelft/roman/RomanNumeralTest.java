@@ -33,4 +33,11 @@ public class RomanNumeralTest {
         int result = roman.convert("XLIV");
         Assertions.assertEquals(44, result);
     }
+
+    @Test
+    public void numberWithAndWithoutSubtractiveNotationThreeNumbers() {
+        RomanNumeral roman = new RomanNumeral();
+        int result = roman.convert("MCMLXXXIII");
+        Assertions.assertEquals(1983, result);
+    }
 }

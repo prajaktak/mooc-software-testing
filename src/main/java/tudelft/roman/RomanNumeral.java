@@ -23,12 +23,17 @@ public class RomanNumeral {
         int convertedNumber = 0;
         for(int i = 0; i < s.length(); i++) {
             int currentNumber = map.get(s.charAt(i));
+            System.out.println(currentNumber);
             int next = i+1 < s.length() ? map.get(s.charAt(i+1)) : 0;
-
-            if(currentNumber >= next)
-                convertedNumber += currentNumber;
-            else
+            System.out.println(next);
+            if(currentNumber < next) {
                 convertedNumber -= currentNumber;
+                System.out.println(convertedNumber);
+            }
+            else {
+                convertedNumber += currentNumber;
+                System.out.println(convertedNumber);
+            }
         }
 
         return convertedNumber;
